@@ -1,0 +1,9 @@
+1.id
+2.Summary
+3.Steps to reproduce
+4.Actual result
+5.Expected Result
+6.Severity
+7.Priority
+8.Attachments
+
