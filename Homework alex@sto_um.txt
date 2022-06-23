@@ -1,0 +1,53 @@
+ДЗ Terminal Alex (@sto_um)
+
+1. Посмотреть, где я: pwd
+2. Создать папку: mkdir folder_name
+3. Зайти в папку: cd folder_name
+4. Создать 3 папки: mkdir name_1 name_2 name_3
+5. Зайти в одну из них: cd name_1
+6. Создать 5 файлов (3 txt, 2 json): touch 1.txt 2.txt 3.txt 4.json 5.json
+7. Создать 3 папки: mkdir name_4 name_5 name_6
+8. Вывести список сдержимого папки: ls -la
+9. + Открыть любой .txt файл: vim 1.txt
+10. + написать туда что-нибудь: i Hello, world!
+11. + сохранить и выйти: esc :wq
+12. Выйти из папки на уровень выше: cd ..
+13. Переместить любые 2 файла, который Вы создали, в другую папку: mv name_1/{3.txt,4.json} name_2
+14. Скопировать любые 2 файла, которые вы создали, в любую другую папку :  cp name_2/{4.json,3.txt} name_1
+15. Найти файл по имени:  find name_1 -name 3.txt
+16. Просмотреть содержимое в реальном времени (команда grep) изучите как она работает: tail -f 1.txt | grep Hello - отслеживаем + фильтруем (или tail -f 1.txt без фильтра)
+17. Вывести несколько первых строк из текстового файла: head -n 5 1.txt
+18. Вывести несколько последних строк из текстового файла: tail -n 5 1.txt
+19. Просмотреть содержимое длинного файла (команда less) изучите как она работает.: less 1.txt
+20. Вывести дату и время: date
+
+Задание *
+1. Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request.:
+
+curl http://162.55.220.72:5005/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name=Alex&age=25"
+
+
+2. Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+echo "3 - go to folder"
+  cd /e/TestFolder
+echo "4 - create 3 folders"
+  mkdir name_1 name_2 name_3
+echo "5 - go to name_1 folder"
+  cd name_1
+echo "6 - create 5 files"
+  touch 1.txt 2.txt 3.txt 4.json 5.json
+echo "7 - create 3 new folders"
+  mkdir name_4 name_5 name_6
+echo "8 - list contents of a folder"
+  ls -la
+echo "13 - move 2 files into other folder"
+  mv 3.txt 4.json name_4
+
+
+
+
+
+
