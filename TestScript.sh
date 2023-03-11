@@ -13,3 +13,4 @@ echo "8 - list contents of a folder"
   ls -la
 echo "13 - move 2 files into other folder"
   mv 3.txt 4.json name_4
+  
